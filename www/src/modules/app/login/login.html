@@ -1,0 +1,27 @@
+<md-content class="loginColor" flex="100" layout="row" layout-align="center center">
+  <form flex="20" ng-submit="login.doLogin()" method="post">
+    <md-content flex layout="row" layout-align="center center" class="loginColor">
+      <h1 flex="100" layout="row" layout-align="center center">Gestión de tronos</h1>
+    </md-content>
+    <div layout-gt-md="row">
+      <md-input-container flex>
+        <label>Username</label>
+        <input type="text" ng-model="login.user.username">
+      </md-input-container>
+    </div>
+    <div layout-gt-md="row">
+      <md-input-container  flex>
+        <label>Password</label>
+        <input type="password" ng-model="login.user.password">
+      </md-input-container>
+    </div>
+    <div layout-gt-md="row" layout-align="center">
+      <md-button type="submit" class="md-raised md-accent" flex>
+        Login
+      </md-button>
+    </div>
+    <div class="help" flex layout="row" layout-align="center center">
+      <p>Don't have account? <a href="" ng-click="login.doRegistration()">Click here to create it.</a></p>
+    </div>
+  </form>
+</md-content>

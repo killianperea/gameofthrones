@@ -1,0 +1,67 @@
+<div layout="column" flex>
+  <md-toolbar layout="row" layout-align="start center">
+    <md-button layout="row" layout-align="center center" hide-sm class="toolbar-button" aria-label="Settings"
+               ng-click="app.toggleRightSidebar()">
+      <i class="material-icons">menu</i>
+    </md-button>
+    <md-button layout="row" layout-align="center center" hide-gt-sm ng-click="app.toggleItemsList()" aria-label="Menu">
+      <i class="material-icons">menu</i>
+    </md-button>
+  </md-toolbar>
+  <md-content ng-if="game" style="background-color: gainsboro" flex class="md-padding page-content">
+    <div ui-view></div>
+  </md-content>
+</div>
+
+<md-sidenav md-component-id="left" class="md-whiteframe-z2 md-sidenav-left">
+  <md-toolbar>
+    <md-toolbar class="md-warn" layout="row" layout-align="center center">
+      <i flex="30" layout="row" layout-align="end center" class="material-icons md-60">account_circle</i>
+      <md-menu md-offset="0 40">
+        <md-button layout="row" layout-align="center center" class="capitalize" ng-click="$mdOpenMenu()"
+                   aria-label="Open menu">
+          <span>{{app.currentUserName}}</span>
+          <i class="material-icons">keyboard_arrow_down</i>
+        </md-button>
+        <md-menu-content width="3">
+          <md-menu-item>
+            <md-button ng-click="app.logout()">Log out</md-button>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
+    </md-toolbar>
+  </md-toolbar>
+  <section>
+    <md-list>
+      <div class="md-list-item-text" layout-margin>
+        <h3>How to play</h3>
+        <h4>About the game</h4>
+        <p>
+          Management of Thrones is a management game where the player represents a newborn house. The objective is to defeat all the families of the seven Kingdoms and claim the realm.
+        </p>
+        <h4>Resources</h4>
+        <h5>Gold</h5>
+        <p>
+          Gold is needed to build and level up the buildings that will help you during the game. As in real life the more gold, the better.
+        </p>
+        <h5>Soldiers</h5>
+        <p>
+          Soldiers are the ones that will make your dirty work. You can lead a number of soldiers to battle and try to defeat a family with them. You can train soldiers once your barracks have been built.
+        </p>
+        <h4>Buildings</h4>
+        <h5>Houses</h5>
+        <p>Houses are, obviously, where all the people in your realm lives. As you level up your houses, more people will come to live. As more people pays taxes, your gold income will increment. Leveling houses will make your gold ratio bigger.</p>
+        <h5>Barraks</h5>
+        <p>Build barraks to train your inhabitants. Once you build them, you will have soldiers. Training a soldier costs 10 gold.</p>
+        <h5>Septon</h5>
+        <p>Your house believes in the seven Gods, and they will help you if you have faith (and gold). You can pay a tribute to the septon and the Gods will bless your soldiers in the next battle. Always remember that faith is not cheap.</p>
+        <h5>Gambling hall</h5>
+        <p>Try your luck betting here! You can bet any amount of gold you have. You have 50% chance to win. If you win, you will double the amount you bet.</p>
+        <h5>Market</h5>
+        <p>Market will improve your economy. As you level up the market, the costs to fight against the different houses of the realm will be discounted.</p>
+        <h4>Battles</h4>
+        <p>Select any family to try to defeat it. Battles will cost you gold, depending on the targeted family. You can send any number of soldiers to battle, but you will not know how many you will need to win! If you do not win the battle, you will loose all your soldiers. If the rival house is defeated, some of them will not return home but at least half of them will.</p>
+      </div>
+    </md-list>
+  </section>
+</md-sidenav>

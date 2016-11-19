@@ -1,0 +1,35 @@
+{
+  "name": "gestion-de-tronos",
+  "version": "1.0.0",
+  "description": "Juego de gestion basado en juego de tronos.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julkian/gestion-de-tronos-middleware.git"
+  },
+  "keywords": [
+    "gestion",
+    "juego",
+    "tronos"
+  ],
+  "author": "Killian Perea Ruiz y Julián Torres Cárdenas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julkian/gestion-de-tronos-middleware/issues"
+  },
+  "homepage": "https://github.com/julkian/gestion-de-tronos-middleware#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.0.1",
+    "mongoose": "^4.5.3",
+    "morgan": "^1.7.0",
+    "promised-io": "^0.3.5",
+    "underscore": "^1.8.3"
+  }
+}

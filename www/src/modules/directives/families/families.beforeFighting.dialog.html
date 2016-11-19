@@ -1,0 +1,29 @@
+<md-dialog aria-label="Dialog After fighting families" flex="50" layout-padding  ng-cloak>
+    <md-dialog-content>
+      <h2>Prepare to fight against the house {{familyName}}</h2>
+      <h4>Fight against this house will cost you {{familyGoldCost}} gold. How much soldires will you send?</h4>
+      <form name="beforeFightForm">
+        <div layout-gt-md="row">
+          <md-input-container  flex>
+            <label>Soldiers</label>
+            <input type="text" pattern="[0-9]*"
+                   name="soldiersInput"
+                   ng-model="beforeFight.soldiersToRisk"
+                   required>
+          </md-input-container>
+        </div>
+      </form>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button
+        md-autofocus
+        class="md-primary md-raised"
+        ng-disabled="beforeFightForm.$invalid"
+        ng-click="fight()">
+        Fight
+      </md-button>
+      <md-button ng-click="cancel()">
+        Cancel
+      </md-button>
+    </md-dialog-actions>
+</md-dialog>

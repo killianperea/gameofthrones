@@ -1,0 +1,29 @@
+<md-dialog aria-label="Dialog to buy soldiers" flex="50" layout-padding  ng-cloak>
+  <md-dialog-content>
+    <h2>Train some soldiers!</h2>
+    <h4>How many soldiers do you want to train?</h4>
+    <form name="trainForm">
+      <div layout-gt-md="row">
+        <md-input-container  flex>
+          <label>Soldiers</label>
+          <input type="text" pattern="[0-9]*"
+                 name="soldiersInput"
+                 ng-model="training.soldiersToTrain"
+                 required>
+        </md-input-container>
+      </div>
+    </form>
+  </md-dialog-content>
+  <md-dialog-actions layout="row">
+    <md-button
+      md-autofocus
+      class="md-primary md-raised"
+      ng-disabled="trainForm.$invalid"
+      ng-click="trainSoldiers()">
+      Train
+    </md-button>
+    <md-button ng-click="cancel()">
+      Cancel
+    </md-button>
+  </md-dialog-actions>
+</md-dialog>
