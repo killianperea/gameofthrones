@@ -24,3 +24,6 @@ and then
     gulp
 
 remember to have installed MongoDb and run mongod
+
+## Web online
+    http://managementofthrones-unii.rhcloud.com/
