@@ -1,0 +1,16 @@
+<md-dialog aria-label="Dialog Before fighting families" flex="30" layout-padding  ng-cloak>
+  <md-dialog-content ng-if="playerWon">
+    <h2>You defeated the house {{familyName}}</h2>
+    <p>Your army crushed your enemy. As a result of the battle, {{soldiersLost}} soldiers did not return home from battlefield</p>
+  </md-dialog-content>
+  <md-dialog-content ng-if="!playerWon">
+    <h2>You loose the battle against the house {{familyName}}</h2>
+    <p>As you see battlefield you know you underestimated the enemy. Your army were outnumbered</p>
+    <p>The soldiers that fought in the battlefield will never return home. And that is your fault.</p>
+  </md-dialog-content>
+  <md-dialog-actions layout="row">
+    <md-button ng-click="cancel()">
+      Close
+    </md-button>
+  </md-dialog-actions>
+</md-dialog>

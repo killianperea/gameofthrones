@@ -1,0 +1,7 @@
+<h3>Families</h3>
+<div layout="row" layout-align="center center" layout-wrap>
+  <div flex="25" ng-repeat="family in families.families track by $index">
+    <md-button align="center" ng-if="!game.familiesDefeated[family.NAME]" style="margin-bottom: 5%; width: 125px" class="md-raised" ng-click="families.showBeforeFightDialog(family.NAME)"><img width="25px" align="center" ng-src="/site/assets/images/{{family.NAME}}.png" />{{family.NAME}}</md-button>
+    <md-button class="md-raised" disabled="true" style="margin-bottom: 5%; background-color: rgba(255, 0, 13, 0.7); font-weight: bold; width: 125px" ng-if="game.familiesDefeated[family.NAME]"><img width="25px" align="center" ng-src="/site/assets/images/{{family.NAME}}.png" /><s>{{family.NAME}}</s></md-button>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div layout="row">
+  <div flex="100" layout="column" layout-align="center center" class="layout-padding">
+    <div layout="row" layout-wrap style="width: 100%">
+      <div flex="50" style="background-color: #f6dd8e" layout="row" layout-align="space-around center">
+        <div layout="column" layout-align="center center">
+          <h1>Management of Thrones</h1>
+          <h2>Hold the Gold: House {{game.houseName}}</h2>
+        </div>
+        <div layout="column" layout-align="start center" class="md-list-item-text" >
+          <h3 style="margin: 10px 0px 5px 0px;"><strong>Gold</strong></h3>
+          <h4 style="margin: 5px;">{{game.totalGold}}</h4>
+          <h3 style="margin: 10px 0px 5px 0px;"><strong>Soldiers</strong></h3>
+          <h4 style="margin: 5px;">{{game.soldiers}}</h4>
+        </div>
+      </div>
+      <div flex="50" style="background-color: #f6dd8e" layout="column" layout-align="center center">
+        <gt-families></gt-families>
+      </div>
+      <gt-houses flex="50"></gt-houses>
+      <gt-barracks flex="50"></gt-barracks>
+      <gt-septon flex="33"></gt-septon>
+      <gt-gambling-hall flex="33"></gt-gambling-hall>
+      <gt-market flex="33"></gt-market>
+    </div>
+  </div>
+</div>

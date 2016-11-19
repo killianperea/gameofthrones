@@ -1,0 +1,36 @@
+<md-dialog flex="33">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 flex="flex">Create user</h2>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+    <md-content md-theme="dark" layout="row" layout-sm="column" layout-align="center center">
+      <md-input-container flex>
+        <label>userId</label>
+        <input ng-model="registration.user.username">
+      </md-input-container>
+      <md-input-container flex>
+        <label>Password</label>
+        <input type="password" ng-model="registration.password">
+      </md-input-container>
+      <md-input-container flex>
+        <label>Repeat password</label>
+        <input type="password" ng-model="registration.passwordControl">
+      </md-input-container>
+      <md-input-container flex>
+        <label>Family Name</label>
+        <input type="text" ng-model="registration.familyName">
+      </md-input-container>
+    </md-content>
+  </md-dialog-content>
+  <md-dialog-actions layout="row">
+    <span flex></span>
+    <md-button class="btn1" ng-click="registration.closeUserDetail()">
+      Close without create
+    </md-button>
+    <md-button class="btn2" ng-click="registration.saveUser()" style="margin-right:20px;">
+      Create
+    </md-button>
+  </md-dialog-actions>
+</md-dialog>
